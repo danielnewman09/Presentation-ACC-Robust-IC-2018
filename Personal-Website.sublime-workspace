@@ -1,0 +1,511 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "css/theme/simple.css",
+			"settings":
+			{
+				"buffer_size": 6327,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2791,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "figures/Experiment/Sens_Curves/Experimental_SI-IC.pdf",
+			"settings":
+			{
+				"buffer_size": 152979,
+				"encoding": "Western (Windows 1252)",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pandoc",
+				"Pandoc"
+			],
+			[
+				"latex",
+				"LaTeXTools: View TeX package documentation"
+			],
+			[
+				"late",
+				"LaTeXTools: Check system"
+			],
+			[
+				"l",
+				"LaTeXTools: Check system"
+			],
+			[
+				"git",
+				"git: commit"
+			],
+			[
+				"git: edit",
+				"git: edit and stage diff"
+			],
+			[
+				"git add",
+				"git: edit and stage diff"
+			],
+			[
+				"latextools",
+				"LaTeXTools: Check system"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 412.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/dnewman/Documents/Github/reveal.js",
+		"/home/dnewman/Documents/Github/reveal.js/css",
+		"/home/dnewman/Documents/Github/reveal.js/css/theme",
+		"/home/dnewman/Documents/Github/reveal.js/figures",
+		"/home/dnewman/Documents/Github/reveal.js/figures/Simulations"
+	],
+	"file_history":
+	[
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Papers/Journal_Concurrent_2018/code/concurrent.py",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Papers/Journal_Concurrent_2018/code/concurrent_nostates.py",
+		"/home/dnewman/Documents/Github/reveal.js/online-exam/backend/src/entities/entity.py",
+		"/home/dnewman/Documents/Github/reveal.js/online-exam/backend/src/entities/exam.py",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/online-exam/backend/src/main.py",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/online-exam/backend/src/auth.py",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Code/Paper_Simulations/CCTA_2018/LQR_Optimization.py",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Research/Working Documents/Conference Papers/IFAC_TwoLink_2018/IFAC_TwoLink_2018.tex",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Code/Paper_Simulations/ACC_ConcurrentDesign_2017/optimal_control_gains.py",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Papers/Journal_Concurrent_2018/code/inputshaping.py",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Papers/Journal_Concurrent_2018/code/test_nlopt.py",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/cv/cv.component.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/app.component.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/cv/cv.component.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/app-routing.module.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/navbar/navbar.component.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/app.module.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/For-Website/convert_notebook.py",
+		"/home/dnewman/Documents/Github/danielnewman09.github.io/index.html",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Papers/Journal_Concurrent_2018/code/concurrent_slopes.py",
+		"/home/dnewman/Documents/Github/CRAWLAB_Toolbox/crawlab_toolbox/inputshaping.py",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Papers/Journal_Concurrent_2018/code/test_nlopt (copy).py",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/table-of-contents.directive.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/For-Website/Create-Model.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/For-Website/main_css.txt",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/dist/main.a3c305d32863320b2430.bundle.js",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/dist/3rdpartylicenses.txt",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/dist/styles.489a7fc5dcc2c681509d.bundle.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/cv/cv.component.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/app.component.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/index.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/index.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/homepage/homepage.component.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/homepage/homepage.component.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/view2/view2.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/app.module.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/homepage/homepage.component.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/resume/resume.component.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/app.component.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/app.component.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/resume/resume.component.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/resume/resume.component.spec.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/homepage/homepage.component.spec.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/home/home.component.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/styles.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/trial/src/app/app.component.spec.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/app-routing.module.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/typings.d.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/tslint.json",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/home/home.component.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/resume/resume.component.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/resume/resume.component.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/navbar/navbar.component.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/home/home.component.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/templates/footer.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/app.component.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/footer/footer.component.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/app.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/navbar/navbar.component.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/view1/view1.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/app.js",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/styles.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/view2/view2.js",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/view2/saveprev.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/view2/view2.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/view2.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/Templates/header.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/index.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/templates/header.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/view1/view1.js",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/T0021-airpair-angularjs-tutorial/js/main.js",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/view3/view3.html",
+		"/home/dnewman/Documents/Github/Catheter-Ablation/code/notebooks/Create-Model.html",
+		"/home/dnewman/Documents/Github/CRAWLAB_Toolbox/Examples/Plotting/examples.py",
+		"/home/dnewman/Documents/Github/CRAWLAB_Toolbox/crawlab_toolbox/plotting.py",
+		"/home/dnewman/Documents/Github/CRAWLAB_Toolbox/meta.yaml",
+		"/home/dnewman/Documents/Github/CRAWLAB_Toolbox/Examples/Plotting/test.py",
+		"/home/dnewman/Documents/Github/CRAWLAB_Toolbox/Examples/Plotting/plotting.py",
+		"/home/dnewman/Documents/Github/Catheter-Ablation/environment.yml",
+		"/home/dnewman/Downloads/DS-17-1620_AuthorProof.pdf",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/tex/test.tex",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/resume/resume.component.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/my-website/src/app/app.component.spec.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/angular-tour-of-heroes/src/app/heroes/heroes.component.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/Angular-test/app/view3/view3_test.js",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/angular-tour-of-heroes/src/app/app.component.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/angular-tour-of-heroes/src/app/heroes/heroes.component.html",
+		"/home/dnewman/Documents/MSME/engr-640.md",
+		"/home/dnewman/Desktop/install_zotero.py",
+		"/home/dnewman/.fonts/Read Me.txt",
+		"/etc/hosts",
+		"/home/dnewman/snap/inkscape/4019/extensions/textext.py",
+		"/home/dnewman/Downloads/ImageMagick-7.0.7-25/Install-unix.txt",
+		"/home/dnewman/Downloads/pstoedit-3.71/readme.install",
+		"/home/dnewman/Downloads/klatexformula-4.0.0/build/cmake_install.cmake",
+		"/home/dnewman/Downloads/cm-unicode-0.6.3a/INSTALL",
+		"/home/dnewman/Downloads/Zotero_linux-x86_64/zotero",
+		"/home/dnewman/Desktop/Untitled Document",
+		"/etc/hostname",
+		"/home/dnewman/Downloads/poppler-0.64.0/INSTALL",
+		"/home/dnewman/.local/share/applications/mimeapps.list",
+		"/home/dnewman/.local/share/applications/defaults.list",
+		"/home/dnewman/.local/share/applications/Untitled Document",
+		"/home/dnewman/snap/inkscape/4019/extensions/inkex.py",
+		"/home/dnewman/snap/inkscape/4019/extensions/Untitled Document",
+		"/home/dnewman/snap/inkscape/4019/extensions/default_packages.tex",
+		"/home/dnewman/Downloads/ImageMagick-6.9.9-37-portable-Q16-x64.zip",
+		"/home/dnewman/snap/inkscape/4019/extensions/latextext_gtk3.py",
+		"/home/dnewman/Downloads/klatexformula-4.0.0/build/Makefile",
+		"/home/dnewman/Downloads/cm-unicode-0.6.3a/Changes",
+		"/home/dnewman/Downloads/Zotero_linux-x86_64/set_launcher_icon",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/angular-tour-of-heroes/src/styles.css",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/angular-tour-of-heroes/src/app/app.component.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/angular-tuotrial/index.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/angular-tuotrial/templates/header.html",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/angular-tour-of-heroes/src/app/hero.ts",
+		"/home/dnewman/Documents/Github/Angular-Tinkering/angular-tour-of-heroes/src/app/app.component.css",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Research/Working Documents/Thesis/Daniel_Thesis_2018/chapter3.tex",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Research/Working Documents/Thesis/Daniel_Thesis_2018/thesis.tex",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Research/Working Documents/Thesis/Daniel_Thesis_2018/ULL-style.sty",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Research/Working Documents/Thesis/Daniel_Thesis_2018/gatech-thesis.cls",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Research/Working Documents/Thesis/Daniel_Thesis_2018/chapter6.tex",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Research/Working Documents/Thesis/Daniel_Thesis_2018/chapter5.tex",
+		"/home/dnewman/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Research/Working Documents/Thesis/Daniel_Thesis_2018/chapter2.tex",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Research/Working Documents/Thesis/Daniel_Thesis_2018/chapter1.tex",
+		"/home/dnewman/Documents/Github/CRAWLAB-Student-Code/Daniel Newman/Research/Working Documents/Thesis/Daniel_Thesis_2018/chapter4.tex",
+		"/home/dnewman/Documents/LaTeX-Test.tex"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 616.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"which result",
+			"which results",
+			"inf",
+			"init_freqs",
+			", K = args",
+			"Experience",
+			"Resume",
+			"resume",
+			"cvComponent",
+			"resume",
+			"cvComponent",
+			"resume",
+			"home",
+			"Home",
+			"nav",
+			"home",
+			"nav",
+			"contactdetails",
+			"id=\"experienceParagraph\"",
+			"id=\"bold\"",
+			"contactdetails",
+			"mainarea",
+			"name",
+			"maindetails",
+			"main_text",
+			"education",
+			"sectiontitle",
+			"sectiontile",
+			"sectiontitle",
+			"name",
+			"bold",
+			"p id=\"experiencepar",
+			"style=\"font-weight:bold\"",
+			"clear",
+			"name",
+			"experience",
+			"education",
+			"experiencePargraph",
+			"experienceParagraph",
+			"name",
+			"experience",
+			"name",
+			"resumetitle",
+			"education",
+			"  ",
+			"rpath",
+			"  ",
+			"   ",
+			"\\thesection",
+			"path",
+			"\\section",
+			"section"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "css/theme/simple.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5360,
+								5360
+							]
+						],
+						"settings":
+						{
+							"git_savvy.repo_path": "/home/dnewman/Documents/Github/reveal.js",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4950.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2791,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2052,
+								2052
+							]
+						],
+						"settings":
+						{
+							"git_savvy.repo_path": "/home/dnewman/Documents/Github/reveal.js",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 594.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "figures/Experiment/Sens_Curves/Experimental_SI-IC.pdf",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 152979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_savvy.repo_path": "/home/dnewman/Documents/Github/reveal.js",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 220.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 60.0
+	},
+	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"project": "Personal-Website.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 308.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

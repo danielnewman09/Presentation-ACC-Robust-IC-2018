@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Eliminating Nonzero Initial States in Flexible Systems through Specified Insensitivity Input Shaping</h2>
+
+					<h3>Daniel Newman & Joshua Vaughan</h3>
+					<h3>University of Louisiana at Lafayette</h3>
+					<h3>Department of Mechanical Engineering</h3>
+					<h3>joshua.vaughan@louisiana.edu</h3>
+					<h3>@Doc_Vaughan</h3>
+					<h3>http://www.ucs.louisana.edu/~jev9637/</h3>
+				</section>
+				<section>
+					<h1>Outline</h1>
+					<ul>
+						<li class="fragment">Input Shaping Background</li>
+						<li class="fragment">Or here</li>
+						<li class="fragment">Or here</li>
+						<li class="fragment">Or here</li>
+					</ul>
+				</section>
+				<section>
+				<h1> Input Shaping Process </h1>
+				<div style="display:inline-block; width: 100%; position:absolute: top:0;left:0;">
+					<div class="fragment current-visible" data-fragment-index="0" style="position:relative;">
+					  <img src="figures/test/[export] Input Shaper.png"/>
+					</div>
+					<div class="fragment current-visible" data-fragment-index="1" style="position:relative;">
+					  <img src="figures/test/[export] Layer 2.png"/>
+					</div>  
+					  <img class="plot fragment current-visible" src="figures/test/[export] Layer1.png"/>
+				</div>
+				</section>
+				<section>
+					<h1>SI-IC Response</h1>
+					<img class="plot" src="SIIC_Response.svg">
+				</section>
+				<section>
+					<h1>Slide 2</h1>
+					<div style="position:relative; width:960px; height:700px; margin:0 auto;">
+					  <img class="fragment fade-out" data-fragment-index="0"src="figures/test/[export] Layer1.png" style="position:absolute;top:0;left:0;" />
+					  <img class="fragment fade-in" data-fragment-index="0"src="figures/test/[export] Layer 2.png" style="position:absolute;top:0;left:0;" />
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
