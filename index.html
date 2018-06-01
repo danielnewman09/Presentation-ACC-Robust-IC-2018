@@ -36,36 +36,66 @@
 					<h3>http://www.ucs.louisana.edu/~jev9637/</h3>
 				</section>
 				<section>
+				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
 					<h1>Outline</h1>
-					<ul>
-						<li class="fragment">Input Shaping Background</li>
-						<li class="fragment">Or here</li>
-						<li class="fragment">Or here</li>
-						<li class="fragment">Or here</li>
-					</ul>
-				</section>
-				<section>
-				<h1> Input Shaping Process </h1>
-				<div style="display:inline-block; width: 100%; position:absolute: top:0;left:0;">
-					<div class="fragment current-visible" data-fragment-index="0" style="position:relative;">
-					  <img src="figures/test/[export] Input Shaper.png"/>
+					<div style="display:inline-block;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">
+						<ul>
+							<li class="fragment">Input Shaping Background</li>
+							<li class="fragment">Or here</li>
+							<li class="fragment">Or here</li>
+							<li class="fragment">Or here</li>
+						</ul>
 					</div>
-					<div class="fragment current-visible" data-fragment-index="1" style="position:relative;">
-					  <img src="figures/test/[export] Layer 2.png"/>
-					</div>  
-					  <img class="plot fragment current-visible" src="figures/test/[export] Layer1.png"/>
 				</div>
 				</section>
 				<section>
-					<h1>SI-IC Response</h1>
-					<img class="plot" src="SIIC_Response.svg">
+				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
+					<h1>ZV-IC Shaper Solution</h1>
+					<div style="display:inline-block;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">
+						$$
+						\begin{align}
+						& \underset{t}{\text{minimize}}
+						& & t_n \\
+						& \fragment{1}{\text{subject to}}
+						& &\fragment{2}{PRV_{IC} = 0}\\
+						&&&\fragment{3}{A_i > 0}\\
+						&&&\fragment{4}{\sum_{i=1}^{n} A_i = 1}\\
+						\end{align}
+						$$
+					</div>
+				</div>
 				</section>
 				<section>
-					<h1>Slide 2</h1>
-					<div style="position:relative; width:960px; height:700px; margin:0 auto;">
-					  <img class="fragment fade-out" data-fragment-index="0"src="figures/test/[export] Layer1.png" style="position:absolute;top:0;left:0;" />
-					  <img class="fragment fade-in" data-fragment-index="0"src="figures/test/[export] Layer 2.png" style="position:absolute;top:0;left:0;" />
+					
+				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
+					<h1>SI-IC Response</h1>
+					<div style="display:inline-block;width:100%;position:absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="SIIC_Response.svg" style="width:100%;">
 					</div>
+				</div>
+				</section>
+				<section>
+					<h1>Input Shaping Process</h1>
+					<div style="position:relative; width:960px; height:700px; margin:0 auto;justify-content: center;">
+					<div style="display:inline-block;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">  
+					  	<img class="fragment" src="figures/test/reference.png" style="vertical-align:middle;border:0;position:absolute;left:0;">
+					  	<img class="plain fragment" src="figures/test/convolved-with.png" style="border:0;position:absolute;vertical-align:middle;left:0;">
+					  	<img class="plain fragment" src="figures/test/input-shaper.png" style="border:0;position:absolute;vertical-align:middle;left:0;">
+						<img class="plain fragment" src="figures/test/next.png" style="border:0;position:absolute;vertical-align:middle;left:0%;">
+						<img class="plain fragment" src="figures/test/shaped-command.png" style="border:0;position:absolute;vertical-align:middle;left:0%;">
+					</div>
+				</div>
+
+				</section>
+				<section>
+					
+				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
+					<h1>Input Shaping Process</h1>
+					<div style="display:inline-block;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">
+						  <img class="fragment" src="figures/test/reference.png" style="vertical-align:middle;border:0;position:absolute;left:0;">
+					</div>
+				</div>
+
 				</section>
 			</div>
 		</div>
@@ -86,6 +116,13 @@
 					{ src: 'plugin/math/math.js', async: true }
 				]
 			});
+
+			Reveal.addEventListener( 'fragmentshown', function( event ) {
+				// event.fragment = the fragment DOM element
+			} );
+			Reveal.addEventListener( 'fragmenthidden', function( event ) {
+				// event.fragment = the fragment DOM element
+			} );
 
 		</script>
 	</body>
