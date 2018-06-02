@@ -33,6 +33,22 @@ var RevealMath = window.RevealMath || (function(){
 
 		} );
 
+	MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+	    var TEX = MathJax.InputJax.TeX;
+	    TEX.Definitions.Add({macros: {'fragment': 'FRAGMENT_INDEX_attribute'}});
+	    TEX.Parse.Augment({
+	     FRAGMENT_INDEX_attribute: function (name) {
+	         var index = this.GetArgument(name);
+	         var arg   = this.ParseArg(name);
+	         this.Push(arg.With({
+	            'class': 'fragment',
+	            attrNames: ['data-fragment-index'],
+	            attr: {'data-fragment-index':index}
+	         }));
+	     }
+	    });
+	});
+
 	} );
 
 	function loadScript( url, callback ) {
@@ -65,3 +81,4 @@ var RevealMath = window.RevealMath || (function(){
 	}
 
 })();
+
