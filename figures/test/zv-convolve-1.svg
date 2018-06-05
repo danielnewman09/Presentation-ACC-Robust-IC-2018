@@ -23,11 +23,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0862785"
-     inkscape:cx="518.65962"
-     inkscape:cy="363.73841"
+     inkscape:zoom="1.3532024"
+     inkscape:cx="703.41854"
+     inkscape:cy="375.82009"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer5"
+     inkscape:current-layer="g29210"
      showgrid="false"
      inkscape:window-width="1855"
      inkscape:window-height="1056"
@@ -395,22 +395,17 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7"
-     inkscape:label="shaped-command"
-     transform="translate(0,-26.458333)" />
   <g
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="next"
      transform="translate(0,-1.3333333e-6)">
     <g
-       transform="matrix(0.30372564,0,0,-0.30372564,73.6487,151.13193)"
+       transform="matrix(0.30372564,0,0,-0.30372564,86.348708,151.13193)"
        inkscape:label="ZVshaping_2col"
        id="g27092">
       <g
@@ -434,7 +429,7 @@
          id="g29210"
          transform="translate(332.33533,248.00977)">
         <g
-           transform="matrix(1,0,0,-1,0,508.2)"
+           transform="matrix(1,0,0,-1,-36.587293,508.2)"
            id="g27734">
           <path
              inkscape:connector-curvature="0"
@@ -446,9 +441,9 @@
            inkscape:connector-curvature="0"
            id="path27738"
            style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           d="m 138.7206,82.2943 -4.8541,-7.1637 19.2537,7.0553 -19.1453,7.3443 z" />
+           d="m 102.13335,82.2943 -4.854104,-7.1637 19.253704,7.0553 -19.145304,7.3443 z" />
         <g
-           transform="matrix(1,0,0,-1,0,508.2)"
+           transform="matrix(1,0,0,-1,-36.587293,508.2)"
            id="g27740">
           <path
              inkscape:connector-curvature="0"
@@ -1077,7 +1072,7 @@
            height="44.26421"
            x="558.51019"
            y="-65.193893" /></flowRegion><flowPara
-         id="flowPara3302"></flowPara></flowRoot>    <flowRoot
+         id="flowPara3302" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3312"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -1088,7 +1083,7 @@
            height="65.103447"
            x="712.133"
            y="-58.684448" /></flowRegion><flowPara
-         id="flowPara3318"></flowPara></flowRoot>    <flowRoot
+         id="flowPara3318" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3320"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -1099,7 +1094,7 @@
            height="165.33984"
            x="389.26468"
            y="-134.19398" /></flowRegion><flowPara
-         id="flowPara3326"></flowPara></flowRoot>    <flowRoot
+         id="flowPara3326" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot18570"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -1110,7 +1105,7 @@
            height="455.66098"
            x="-147.1134"
            y="227.41447" /></flowRegion><flowPara
-         id="flowPara18576"></flowPara></flowRoot>    <rect
+         id="flowPara18576" /></flowRoot>    <rect
        id="rect6246"
        width="35.464062"
        height="72.139473"

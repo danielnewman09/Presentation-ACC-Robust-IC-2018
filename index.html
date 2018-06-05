@@ -38,16 +38,75 @@
 				<section>
 				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
 					<h1>Outline</h1>
-					<div style="display:inline-block;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">
+					<div style="display:inline-block;width:100%;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">
 						<ul>
-							<li class="fragment">Input Shaping Background</li>
-							<li class="fragment">Or here</li>
-							<li class="fragment">Or here</li>
-							<li class="fragment">Or here</li>
+							<li class="fragment fade-up">Input Shaping Background</li>
+							<li class="fragment fade-up">Dynamic Model</li>
+							<ul>
+								<li class="fragment fade-up">Discrete Approximation
+								</li>
+								<li class="fragment fade-up">Linearization</li>
+								<li class="fragment fade-up">Modal Analysis</li>
+							</ul>
+
+							<li class="fragment fade-up">Concurrent Design Approach</li>
+							<li class="fragment fade-up">Simulated Results</li>
 						</ul>
 					</div>
 				</div>
 				</section>
+
+				<section>
+					<h1>Input Shaping Process</h1>
+					<div style="position:relative; width:960px; height:650px; margin:0 auto;justify-content: center;">
+					  	<img class="fragment fade-up" src="figures/test/reference.png" style="vertical-align:middle;border:0;position:absolute;left:0;width:100%">
+					  	<img class="plain fragment fade-up" src="figures/test/convolved-with.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:100%">
+					  	<img class="plain fragment fade-up" src="figures/test/input-shaper.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:100%">
+						<img class="plain fragment fade-up" src="figures/test/next.png" style="border:0;position:absolute;vertical-align:middle;left:0%;width:100%">
+					</div>
+					<div style="position:absolute;left:0px;top:60%;">
+						<ul>
+							<li class="fragment fade-up">Input shaper requirements:</li>
+							<ul>
+								<li class="fragment fade-up">Natural frequency</li>
+								<li class="fragment fade-up">Damping ratio</li>
+								<li class="fragment fade-up">$\sum A_i = 1$</li>
+							</ul>
+						</ul>
+
+					</div>
+				</section>
+
+				<section>
+					<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
+						<h1>Vibration Constraints</h1>
+						<span class="fragment" data-fragment-index="1"></span>
+						<span class="fragment" data-fragment-index="2"></span>
+						<span class="fragment" data-fragment-index="0"></span>
+
+						<div class="fragment fade-up" data-fragment-index="0" style="display:inline-block;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">	
+							$$
+							\fragment{0}{V(\omega, \zeta) = e^{-\zeta \omega t_n} \sqrt{[C(\omega,\zeta)]^2 + [S(\omega,\zeta)]^2}}
+							$$
+
+							$$
+							\begin{align}
+							\fragment{1}{C(\omega,\zeta) }&\fragment{1}{= \sum_{i=1}^{n} A_i e^{\zeta \omega t_i} \cos \left (\omega \sqrt{1 - \zeta^2} t_i \right )}\\
+							\fragment{2}{S(\omega,\zeta) }&\fragment{2}{= \sum_{i=1}^{n} A_i e^{\zeta \omega t_i} \sin \left ( \omega \sqrt{1 - \zeta^2} t_i \right )}
+							\end{align}
+							$$
+
+							<div class="fragment fade-up" data-fragment-index="4" style="display:inline-block;width:100%;position:relative;background: rgba(255, 255, 255, 1.0);border: 4px solid #000;-webkit-filter: drop-shadow(5px 5px 5px #222);filter: drop-shadow(5px 5px 5px #222);margin-top:2.5%;padding-top:2.5%;padding-bottom:2.5%;padding-left:5%;padding-right:5%;">
+								The vibration constraint is achieved by setting:
+								$$
+								V(\omega, \zeta) \leq V_{tol}
+								$$
+							</div>
+						</div>
+
+					</div>		
+				</section>
+				
 				<section>
 				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
 					<h1>ZV-IC Shaper Solution</h1>
@@ -65,6 +124,27 @@
 					</div>
 				</div>
 				</section>
+
+				<section>
+				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
+					<h1>SI-IC Shaper Solution</h1>
+					<div style="display:inline-block;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">				
+						\begin{equation}
+						\begin{aligned}
+						
+						& \underset{t}{\text{minimize}}
+						& & t_n \\
+						& \fragment{1}{\text{subject to}}
+						& & \fragment{2}{PRV_{IC} \leq V_{tol}, \text{   } \forall \omega_1 \leq \omega \leq \omega_2}\\
+						&&& \fragment{3}{\left | A_i \right | \leq 1}\\
+						&&& \fragment{4}{\sum_{i=1}^{n} A_i = 1}\\
+						&&& \fragment{5}{\left |\sum_{i=1}^{k - 1} A_i \right | \leq 1, \text{  } \forall k \in n} \\ %\text{  } n,k=1,2,3...\\
+						\end{aligned}
+						\end{equation}
+					</div>
+				</div>
+				</section>
+
 				<section>
 					<h1>SI-IC Response</h1>
 				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
@@ -73,16 +153,88 @@
 					</div>
 				</div>
 				</section>
-				<section>
-					<h1>Input Shaping Process</h1>
-					<div style="position:relative; width:960px; height:650px; margin:0 auto;justify-content: center;">
-					  	<img class="fragment" src="figures/test/reference.png" style="vertical-align:middle;border:0;position:absolute;left:0;width:100%">
-					  	<img class="plain fragment" src="figures/test/convolved-with.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:100%">
-					  	<img class="plain fragment" src="figures/test/input-shaper.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:100%">
-						<img class="plain fragment" src="figures/test/next.png" style="border:0;position:absolute;vertical-align:middle;left:0%;width:100%">
-						<img class="plain fragment" src="figures/test/shaped-command.png" style="border:0;position:absolute;vertical-align:middle;left:0%;width:100%">
-					</div>
 
+				<section>
+					<h1>ZV-IC Response</h1>
+				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="ZVIC_Response.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<h1>Experimental Setup</h1>
+				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Experiment/Kit_Setup_Annotated.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<h1>SI-IC Sens Curve</h1>
+				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Experiment/Sens_Curves/Experimental_SI-IC.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<h1>ZV-IC Sens Curve</h1>
+				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Experiment/Sens_Curves/Experimental_ZV-IC.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+
+				<section>
+					<h1>Simulation Variables</h1>
+					<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
+						<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<table style="font-size:1.0em;margin-bottom:3px;">
+							<thead>
+								<tr>
+									<th>$\mbox{Variable}$</th>
+									<th>$\mbox{Value}$</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>$\omega_n$</td>
+									<td>$14.28\frac{\mbox{rad}}{\mbox{s}}$</td>
+								</tr>
+								<tr>
+									<td>$\zeta$</td>
+									<td>$0.01$</td>
+								</tr>
+								<tr>
+									<td>$A_{max}$</td>
+									<td>$0.9\frac{\mbox{m}}{\mbox{s}^2}$</td>
+								</tr>
+								<tr>
+									<td>$V_{max}$</td>
+									<td>$0.15\frac{\mbox{m}}{\mbox{s}}$</td>
+								</tr>
+								<tr>
+									<td>$v_{f0}$</td>
+									<td>$0\frac{\mbox{mm}}{\mbox{s}}$</td>
+								</tr>
+								<tr>
+									<td>$y_{f0}$</td>
+									<td>$0.36\mbox{mm}$</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<h2>Thank You.</h2>
 				</section>
 			</div>
 		</div>
