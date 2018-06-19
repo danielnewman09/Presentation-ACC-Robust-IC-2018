@@ -30,7 +30,7 @@ body {
   color: #222; 
 
   /* Add Fluer di Lis to the top right */
-  background-image: url('../../Fleur_de_lis.png');
+  background-image: url('fleur_de_lis.png');
   background-size: 6%;
   background-position: 99% 1%;
   background-repeat: no-repeat;
