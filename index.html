@@ -3,12 +3,18 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Initial Setup of the Gigabots</title>
+
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/simple.css">
+		<link rel="stylesheet" href="css/print/print.css">
+        <link rel="stylesheet" href="css/CRAWLAB.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -21,24 +27,34 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<script src="js/reveal.js"></script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
-					<h2>Eliminating Nonzero Initial States in Flexible Systems through Specified Insensitivity Input Shaping</h2>
 
-					<h3>Daniel Newman & Joshua Vaughan</h3>
-					<h3>University of Louisiana at Lafayette</h3>
-					<h3>Department of Mechanical Engineering</h3>
-					<h3>joshua.vaughan@louisiana.edu</h3>
-					<h3>@Doc_Vaughan</h3>
-					<h3>http://www.ucs.louisana.edu/~jev9637/</h3>
-				</section>
+                <section> <!-- Title Slide -->
+                    <br>
+                    <br>
+                    <h2 style="text-align:center;">Eliminating Nonzero Initial States in Flexible Systems through Specified Insensitivity Input Shaping</h2>
+                    <p style="text-align: center;">
+                    <br>
+
+                    Joshua Vaughan and Daniel Newman<br>    
+                    Department of Mechanical Engineering<br>
+                    University of Louisiana at Lafayette<br>
+                    <a href="mailto:joshua.vaughan@louisiana.edu" title="Dr. Vaughan's Email">joshua.vaughan@louisiana.edu</a><br>
+                    <a href="http://twitter.com/doc_vaughan" title="Dr. Vaughan's Twitter Feed">@Doc_Vaughan</a><br>
+                    <a href="http://www.ucs.louisiana.edu/~jev9637/" title="CRAWLAB webpage">http://www.ucs.louisiana.edu/~jev9637/</a>
+                    </p>
+                </section>
+
 				<section>
-				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
-					<h1>Outline</h1>
-					<div style="display:inline-block;width:100%;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">
+					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+					<h2>Outline</h2>
+					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+						<div style="font-size: 1.0em">
 						<ul>
 							<li class="fragment fade-up">Input Shaping Background</li>
 							<li class="fragment fade-up">Dynamic Model</li>
@@ -53,20 +69,21 @@
 							<li class="fragment fade-up">Simulated Results</li>
 						</ul>
 					</div>
+					</div>
 				</div>
 				</section>
 
 				<section>
-					<h1>Input Shaping Process</h1>
-					<div style="position:relative; width:960px; height:650px; margin:0 auto;justify-content: center;">
-					  	<img class="fragment fade-up" src="figures/test/reference.png" style="vertical-align:middle;border:0;position:absolute;left:0;width:100%">
-					  	<img class="plain fragment fade-up" src="figures/test/convolved-with.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:100%">
-					  	<img class="plain fragment fade-up" src="figures/test/input-shaper.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:100%">
-						<img class="plain fragment fade-up" src="figures/test/next.png" style="border:0;position:absolute;vertical-align:middle;left:0%;width:100%">
+					<h2>Input Shaping Process</h2>
+					<div style="position:relative; width:1280px; height:960px; margin:-75px auto;justify-content: center;">
+					  	<img class="fragment fade-up" src="figures/test/reference.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
+					  	<img class="plain fragment fade-up" src="figures/test/convolved-with.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+					  	<img class="plain fragment fade-up" src="figures/test/input-shaper.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+						<img class="plain fragment fade-up" src="figures/test/next.png" style="border:0;position:absolute;vertical-align:middle;left:0%;width:95%">
 					</div>
 					<div style="position:absolute;left:0px;top:60%;">
 						<ul>
-							<li class="fragment fade-up">Input shaper requirements:</li>
+							<li class="fragment fade-up">Input shaper design:</li>
 							<ul>
 								<li class="fragment fade-up">Natural frequency</li>
 								<li class="fragment fade-up">Damping ratio</li>
@@ -78,13 +95,13 @@
 				</section>
 
 				<section>
-					<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
-						<h1>Vibration Constraints</h1>
+	
+						<h2>Vibration Constraints</h2>
 						<span class="fragment" data-fragment-index="1"></span>
 						<span class="fragment" data-fragment-index="2"></span>
 						<span class="fragment" data-fragment-index="0"></span>
 
-						<div class="fragment fade-up" data-fragment-index="0" style="display:inline-block;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">	
+						<div class="fragment fade-up" data-fragment-index="0" style="display:inline-block;font-size: 1.5em;">	
 							$$
 							\fragment{0}{V(\omega, \zeta) = e^{-\zeta \omega t_n} \sqrt{[C(\omega,\zeta)]^2 + [S(\omega,\zeta)]^2}}
 							$$
@@ -102,15 +119,13 @@
 								V(\omega, \zeta) \leq V_{tol}
 								$$
 							</div>
-						</div>
-
-					</div>		
+						</div>		
 				</section>
 				
 				<section>
-				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
-					<h1>ZV-IC Shaper Solution</h1>
-					<div style="display:inline-block;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">
+					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+					<h2>ZV-IC Shaper Solution</h2>
+					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;font-size:1.5em">
 						$$
 						\begin{align}
 						& \underset{t}{\text{minimize}}
@@ -126,9 +141,9 @@
 				</section>
 
 				<section>
-				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
-					<h1>SI-IC Shaper Solution</h1>
-					<div style="display:inline-block;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">				
+					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+					<h2>SI-IC Shaper Solution</h2>
+					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;font-size:1.5em">		
 						\begin{equation}
 						\begin{aligned}
 						
@@ -146,45 +161,45 @@
 				</section>
 
 				<section>
-					<h1>SI-IC Response</h1>
-				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
-					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+					<h2>SI-IC Response</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 40%; left: 50%;transform: translate(-50%,-50%);">
 						<img class="plot" src="SIIC_Response.svg" style="width:100%;">
 					</div>
 				</div>
 				</section>
 
 				<section>
-					<h1>ZV-IC Response</h1>
-				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
-					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+					<h2>ZV-IC Response</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 40%; left: 50%;transform: translate(-50%,-50%);">
 						<img class="plot" src="ZVIC_Response.svg" style="width:100%;">
 					</div>
 				</div>
 				</section>
 
 				<section>
-					<h1>Experimental Setup</h1>
-				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
-					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+					<h2>Experimental Setup</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 40%; left: 50%;transform: translate(-50%,-50%);">
 						<img class="plot" src="figures/Experiment/Kit_Setup_Annotated.svg" style="width:100%;">
 					</div>
 				</div>
 				</section>
 
 				<section>
-					<h1>SI-IC Sens Curve</h1>
-				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
-					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+					<h2>SI-IC Sens Curve</h2>
+				<div style="display:table-cell;position:relative; width: 1280px; height: 960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 40%; left: 50%;transform: translate(-50%,-50%);">
 						<img class="plot" src="figures/Experiment/Sens_Curves/Experimental_SI-IC.svg" style="width:100%;">
 					</div>
 				</div>
 				</section>
 
 				<section>
-					<h1>ZV-IC Sens Curve</h1>
-				<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
-					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+					<h2>ZV-IC Sens Curve</h2>
+				<div style="display:table-cell;position:relative; width: 1280px; height: 960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 40%; left: 50%;transform: translate(-50%,-50%);">
 						<img class="plot" src="figures/Experiment/Sens_Curves/Experimental_ZV-IC.svg" style="width:100%;">
 					</div>
 				</div>
@@ -192,9 +207,9 @@
 
 
 				<section>
-					<h1>Simulation Variables</h1>
-					<div style="display:table-cell;position:relative; width:960px; height:700px; margin:0 auto;">
-						<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+					<h2>Simulation Variables</h2>
+					<div style="display:table-cell;position:relative; width: 1280px; height: 960px; margin:0 auto;">
+						<div style="display:inline-block;width:100%;position:absolute;top: 40%; left: 50%;transform: translate(-50%,-50%);">
 						<table style="font-size:1.0em;margin-bottom:3px;">
 							<thead>
 								<tr>
@@ -233,36 +248,65 @@
 				</div>
 				</section>
 
-				<section>
-					<h2>Thank You.</h2>
+				<section data-state="centerText" data-markdown>
+					<h2 style="text-align: center;"> # Thank You.</h2>
 				</section>
 			</div>
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        
+        <!-- Try to get jQuery from CDN, if not fall back to local version -->
+        <script src="https://code.jquery.com/jquery-1.8.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.8.0.min.js"><\/script>')</script>
+        
+        <!-- Try to get jQuery UI from CDN, if not fall back to local version -->
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/math/math.js', async: true }
-				]
-			});
+        <script>
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: false,
+                
+                // Help the user learn the controls by providing hints, for example by
+                // bouncing the down arrow when they first encounter a vertical slide
+                controlsTutorial: true,
 
-			Reveal.addEventListener( 'fragmentshown', function( event ) {
-				// event.fragment = the fragment DOM element
-			} );
-			Reveal.addEventListener( 'fragmenthidden', function( event ) {
-				// event.fragment = the fragment DOM element
-			} );
+                //transition: 'none', // none/fade/slide/convex/concave/zoom
+                
+                // The "normal" size of the presentation, aspect ratio will be preserved
+                // when the presentation is scaled to fit different resolutions. Can be
+                // specified using percentage units.
+                width: 1280,
+                height: 960,
 
-		</script>
+                // Factor of the display size that should remain empty around the content
+                margin: 0.0,
+
+                // Bounds for smallest/largest possible scale to apply to content
+                minScale: 0.2,
+                maxScale: 1.5,
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/math/math.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+
+            Reveal.addEventListener( 'centerText', function() {
+			    Reveal.configure({center: true});
+			}, false ); 
+        </script>
 	</body>
 </html>
