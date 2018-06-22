@@ -4,8 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Initial Setup of the Gigabots</title>
+		<title>Eliminating Nonzero Initial States in Flexible Systems through Specified Insensitivity Input Shaping</title>
 
+ 		<link rel="icon" type="image/x-icon" href="css/fleur_de_lis.png">
 
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -29,6 +30,7 @@
 		</script>
 
 		<script src="js/reveal.js"></script>
+
 	</head>
 	<body>
 		<div class="reveal">
@@ -50,21 +52,23 @@
                     </p>
                 </section>
 
+                <section data-background-video="animations/crane_anim.mp4" data-background-video-loop="true">
+					<h2 style="margin-top:-25px;margin-bottom:0;">Motivation</h2>
+				</section>
+
 				<section>
 					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
 					<h2 style="margin-top:-25px;margin-bottom:0;">Outline</h2>
 					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
 						<div style="font-size: 1.0em">
-						<ul>
+						<ul style="line-height:1.9;">
 							<li class="fragment fade-up">Input Shaping Background</li>
 							<li class="fragment fade-up">Dynamic Model</li>
-							<ul>
-								<li class="fragment fade-up">Discrete Approximation
-								</li>
+							<ul style="display: flex;flex-direction: column;justify-content: space-around">
+								<li class="fragment fade-up">Discrete Approximation</li>
 								<li class="fragment fade-up">Linearization</li>
 								<li class="fragment fade-up">Modal Analysis</li>
 							</ul>
-
 							<li class="fragment fade-up">Concurrent Design Approach</li>
 							<li class="fragment fade-up">Simulated Results</li>
 						</ul>
@@ -75,11 +79,11 @@
 
 				<section>
 					<h2 style="margin-top:-25px;margin-bottom:0;">Input Shaping Process</h2>
-					<div style="position:relative; width:1280px; height:960px; margin:-75px auto;justify-content: center;">
-					  	<img class="fragment fade-up" src="figures/test/reference.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
-					  	<img class="plain fragment fade-up" src="figures/test/convolved-with.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
-					  	<img class="plain fragment fade-up" src="figures/test/input-shaper.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
-						<img class="plain fragment fade-up" src="figures/test/next.png" style="border:0;position:absolute;vertical-align:middle;left:0%;width:95%">
+					<div style="position:relative; width:1280px; height:960px; margin: -2% auto;justify-content: center;">
+					  	<img class="fragment fade-up" src="figures/shaping-process/reference.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
+					  	<img class="plain fragment fade-up" src="figures/shaping-process/convolved-with.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+					  	<img class="plain fragment fade-up" src="figures/shaping-process/input-shaper.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
+						<img class="plain fragment fade-up" src="figures/shaping-process/next.png" style="border:0;position:absolute;vertical-align:middle;left:0%;width:95%">
 					</div>
 					<div style="position:absolute;left:0px;top:60%;">
 						<ul>
@@ -161,56 +165,9 @@
 				</section>
 
 				<section>
-					<h2 style="margin-top:-25px;margin-bottom:0;">SI-IC Response</h2>
-				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
-					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
-						<img class="plot" src="SIIC_Response.svg" style="width:100%;">
-					</div>
-				</div>
-				</section>
-
-				<section>
-					<h2 style="margin-top:-25px;margin-bottom:0;">ZV-IC Response</h2>
-				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
-					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
-						<img class="plot" src="ZVIC_Response.svg" style="width:100%;">
-					</div>
-				</div>
-				</section>
-
-				<section>
-					<h2 style="margin-top:-25px;margin-bottom:0;">Experimental Setup</h2>
-				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
-					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
-						<img class="plot" src="figures/Experiment/Kit_Setup_Annotated.svg" style="width:100%;">
-					</div>
-				</div>
-				</section>
-
-				<section>
-					<h2 style="margin-top:-25px;margin-bottom:0;">SI-IC Sens Curve</h2>
-				<div style="display:table-cell;position:relative; width: 1280px; height: 960px; margin:0 auto;">
-					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
-						<img class="plot" src="figures/Experiment/Sens_Curves/Experimental_SI-IC.svg" style="width:100%;">
-					</div>
-				</div>
-				</section>
-
-				<section>
-					<h2 style="margin-top:-25px;margin-bottom:0;">ZV-IC Sens Curve</h2>
-				<div style="display:table-cell;position:relative; width: 1280px; height: 960px; margin:0 auto;">
-					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
-						<img class="plot" src="figures/Experiment/Sens_Curves/Experimental_ZV-IC.svg" style="width:100%;">
-					</div>
-				</div>
-				</section>
-
-
-				<section>
 					<h2 style="margin-top:-25px;margin-bottom:0;">Simulation Variables</h2>
-					<div style="display:table-cell;position:relative; width: 1280px; height: 960px; margin:0 auto;">
-						<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
-						<table style="font-size:1.0em;margin-bottom:3px;">
+					<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<table style="font-size:1.1em;margin-bottom:3px;">
 							<thead>
 								<tr>
 									<th>$\mbox{Variable}$</th>
@@ -245,7 +202,65 @@
 							</tbody>
 						</table>
 					</div>
+		
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">SI-IC Response</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/SIIC_Response.svg" style="width:100%;">
+					</div>
 				</div>
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">ZV-IC Response</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/ZVIC_Response.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">Experimental Setup</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Experiment/Kit_Setup_Annotated.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">SI-IC Sens Curve</h2>
+				<div style="display:table-cell;position:relative; width: 1280px; height: 960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Experiment/Sens_Curves/Experimental_SI-IC.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">ZV-IC Sens Curve</h2>
+				<div style="display:table-cell;position:relative; width: 1280px; height: 960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Experiment/Sens_Curves/Experimental_ZV-IC.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+					<h2 style="margin-top:-25px;margin-bottom:0;">Conclusions</h2>
+					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);height:80%;width:100%;font-size: 1.0em">
+							<ul style="height:100%;justify-content: space-evenly;padding:0;margin:0;display: flex;flex-direction: column;">
+								<li class="fragment fade-up"><p>Input shaping constraints can be modified to elimniate nonzero inital conditions.</p></li>
+								<li class="fragment fade-up"><p>The non-robust, ZV-IC shaper can be solved in closed-form.</p></li>
+								<li class="fragment fade-up"><p>The Specified Insensitivity method</p></li>
+							</ul>
+						</div>
+					</div>
 				</section>
 
 				<section data-state="centerText" data-markdown>
@@ -292,6 +307,8 @@
                 minScale: 0.2,
                 maxScale: 1.5,
 
+                slideNumber: 'c/t',
+
                 // Optional reveal.js plugins
                 dependencies: [
                     { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -306,7 +323,8 @@
 
             Reveal.addEventListener( 'centerText', function() {
 			    Reveal.configure({center: true});
-			}, false ); 
+			}, false );
         </script>
+        
 	</body>
 </html>
