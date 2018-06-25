@@ -52,9 +52,10 @@
                     </p>
                 </section>
 
-                <section data-background-video="animations/crane_anim.mp4" data-background-video-loop="true">
-					<h2 style="margin-top:-25px;margin-bottom:0;">Motivation</h2>
-				</section>
+                <section>
+                	<h2 style="margin-top:-25px;margin-bottom:0;">Motivation</h2>
+                	<video data-autoplay loop class="stretch" src="animations/crane-anim.mp4" style="-webkit-filter: drop-shadow(5px 5px 5px #222);"></video>
+                </section>
 
 				<section>
 					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
@@ -63,14 +64,13 @@
 						<div style="font-size: 1.0em">
 						<ul style="line-height:1.9;">
 							<li class="fragment fade-up">Input Shaping Background</li>
-							<li class="fragment fade-up">Dynamic Model</li>
+							<li class="fragment fade-up">Initial Condition Formulation</li>
 							<ul style="display: flex;flex-direction: column;justify-content: space-around">
-								<li class="fragment fade-up">Discrete Approximation</li>
-								<li class="fragment fade-up">Linearization</li>
-								<li class="fragment fade-up">Modal Analysis</li>
+								<li class="fragment fade-up">Zero Vibration Solution</li>
+								<li class="fragment fade-up">Modeling Error Considerations</li>
+								<li class="fragment fade-up">Specified Insensitivity Solution</li>
 							</ul>
-							<li class="fragment fade-up">Concurrent Design Approach</li>
-							<li class="fragment fade-up">Simulated Results</li>
+							<li class="fragment fade-up">Experimental Results</li>
 						</ul>
 					</div>
 					</div>
@@ -80,7 +80,7 @@
 				<section>
 					<h2 style="margin-top:-25px;margin-bottom:0;">Input Shaping Process</h2>
 					<div style="position:relative; width:1280px; height:960px; margin: -2% auto;justify-content: center;">
-					  	<img class="fragment fade-up" src="figures/shaping-process/reference.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
+					  	<img class="plain fragment fade-up" src="figures/shaping-process/reference.png" style="vertical-align:middle;border:0;position:absolute;left:0;top:0%;width:95%">
 					  	<img class="plain fragment fade-up" src="figures/shaping-process/convolved-with.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
 					  	<img class="plain fragment fade-up" src="figures/shaping-process/input-shaper.png" style="border:0;position:absolute;vertical-align:middle;left:0;width:95%">
 						<img class="plain fragment fade-up" src="figures/shaping-process/next.png" style="border:0;position:absolute;vertical-align:middle;left:0%;width:95%">
@@ -99,33 +99,100 @@
 				</section>
 
 				<section>
-	
 						<h2 style="margin-top:-25px;margin-bottom:0;">Vibration Constraints</h2>
-						<span class="fragment" data-fragment-index="1"></span>
-						<span class="fragment" data-fragment-index="2"></span>
-						<span class="fragment" data-fragment-index="0"></span>
 
-						<div class="fragment fade-up" data-fragment-index="0" style="display:inline-block;font-size: 1.5em;">	
+						<div class="fragment fade-up" data-fragment-index="0" style="display:inline-block;font-size: 1.5em;line-height:3;">	
 							$$
 							\fragment{0}{V(\omega, \zeta) = e^{-\zeta \omega t_n} \sqrt{[C(\omega,\zeta)]^2 + [S(\omega,\zeta)]^2}}
 							$$
 
 							$$
-							\begin{align}
-							\fragment{1}{C(\omega,\zeta) }&\fragment{1}{= \sum_{i=1}^{n} A_i e^{\zeta \omega t_i} \cos \left (\omega \sqrt{1 - \zeta^2} t_i \right )}\\
-							\fragment{2}{S(\omega,\zeta) }&\fragment{2}{= \sum_{i=1}^{n} A_i e^{\zeta \omega t_i} \sin \left ( \omega \sqrt{1 - \zeta^2} t_i \right )}
-							\end{align}
+							\fragment{1}{C(\omega,\zeta) = \sum_{i=1}^{n} A_i e^{\zeta \omega t_i} \cos \left (\omega \sqrt{1 - \zeta^2} t_i \right )}
 							$$
 
-							<div class="fragment fade-up" data-fragment-index="4" style="display:inline-block;width:100%;position:relative;background: rgba(255, 255, 255, 1.0);border: 4px solid #000;-webkit-filter: drop-shadow(5px 5px 5px #222);filter: drop-shadow(5px 5px 5px #222);margin-top:2.5%;padding-top:2.5%;padding-bottom:2.5%;padding-left:5%;padding-right:5%;">
+							$$
+							\fragment{2}{S(\omega,\zeta) = \sum_{i=1}^{n} A_i e^{\zeta \omega t_i} \sin \left ( \omega \sqrt{1 - \zeta^2} t_i \right )}
+							$$
+						</div>
+
+							<div class="fragment fade-up" data-fragment-index="3" style="display:inline-block;width:100%;position:relative;background: rgba(255, 255, 255, 1.0);border: 4px solid #000;-webkit-filter: drop-shadow(5px 5px 5px #222);filter: drop-shadow(5px 5px 5px #222);margin-top:2.5%;padding-top:2.5%;padding-bottom:2.5%;padding-left:0.0%;padding-right:0.0%;font-size:1.5em;">
 								The vibration constraint is achieved by setting:
 								$$
 								V(\omega, \zeta) \leq V_{tol}
 								$$
 							</div>
-						</div>		
+
 				</section>
-				
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">Sensitivity Plots</h2>
+				<div style="display:table-cell;position:relative; width: 1280px; height: 960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img  class="plain" src="figures/InputShaping/zv-sensitivity-plot.svg" style="width:100%;">
+				</section>
+
+				<section>
+
+					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+						<h2 style="margin-top:-25px;margin-bottom:0;">Vector Diagrams</h2>
+						<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;font-size:1.0em">
+						<img  class="plain" src="figures/VectorDiagrams/impulse-vectors.svg" style="width:100%;">
+						<ul>
+							<li data-fragment-index="0" class="fragment fade-up"><p>Vector digrams graphically demonstrate shaper performance</p></li>
+							<li data-fragment-index="1" class="fragment fade-up"><p>The sum of the vectors is proportional to residual vibration</p></li>
+						</ul>
+
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">IC Vector Diagram</h2>
+					<div style="position:relative; width:1280px; height:960px; margin: -2% auto;justify-content: center;">
+					  	<img class="plain fragment fade-up" src="figures/VectorDiagrams/impulse-init-conditions/base.png" style="vertical-align:middle;border:0;position:absolute;left:20%;top:0%;width:65%">
+					  	<img class="plain fragment fade-up" src="figures/VectorDiagrams/impulse-init-conditions/initial-condition.png" style="border:0;position:absolute;vertical-align:middle;left:20%;width:65%">
+					  	<img class="plain fragment fade-up" src="figures/VectorDiagrams/impulse-init-conditions/shaper-1.png" style="border:0;position:absolute;vertical-align:middle;left:20%;width:65%">
+						<img class="plain fragment fade-up" src="figures/VectorDiagrams/impulse-init-conditions/shaper-2.png" style="border:0;position:absolute;vertical-align:middle;left:20%;width:65%">
+					</div>
+				</section>
+
+				<section>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<h2 style="margin-top:-25px;margin-bottom:0;">IC Residual Vibration</h2>
+					<div style="display:inline-block;width:100%;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);">	
+						<ul class="fragment fade-up" data-fragment-index="1">
+							<li data-fragment-index="1" class="fragment fade-up">Vibration with initial conditions:</li>
+							<div class="fragment fade-up" data-fragment-index="1" style="margin-top:1.5%;margin-bottom:1.5%;"> 
+							\begin{equation}
+							V(\omega,\zeta,y_{f0},v_{f0}) = \frac{\omega}{\sqrt{1 - \zeta^2}} e^{-\zeta \omega t_n} \sqrt{[C_0 + C]^2 + [S_0 + S]^2}	
+							\end{equation}
+							</div>
+							<li data-fragment-index="2" class="fragment fade-up">The initial condition terms are:</li>
+							<div class="fragment fade-up" data-fragment-index="2" style="margin-top:1.5%;margin-bottom:1.5%;"> 
+								\begin{align}
+								C_0 = A_0 y_{f0} \omega_d & & &
+								S_0 = A_0 (v_{f0} + \zeta y_{f0} \omega )
+								\end{align}
+
+							</div>
+							<li data-fragment-index="3" class="fragment fade-up">Vibration from a unity magnitude impulse:</li>
+							<div class="fragment fade-up" data-fragment-index="3" style="margin-top:1.5%;margin-bottom:1.5%;">
+								\begin{equation}
+								V_{\uparrow}(\omega,\zeta,y_{f0},v_{f0}) = \frac{\omega}{\sqrt{1 - \zeta^2}} e^{-\zeta \omega t_n} \sqrt{(1 - C_0)^2 + S_0^2}
+								\end{equation}
+							<li data-fragment-index="4" class="fragment fade-up">Percent Residual Vibration:</li>
+							<div class="fragment fade-up" data-fragment-index="4" style="margin-top:1.5%;margin-bottom:1.5%;">
+								\begin{equation}
+								PRV_{IC} = \frac{V(\omega,\zeta,y_{f0},v_{f0})}{V_{\uparrow}(\omega,\zeta,y_{f0},v_{f0})} \times 100\%
+								\end{equation}
+							</div>
+							</div>
+						</ul>
+					</div>
+				</div>
+				</section>
+
+
 				<section>
 					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
 					<h2 style="margin-top:-25px;margin-bottom:0;">ZV-IC Shaper Solution</h2>
@@ -145,35 +212,16 @@
 				</section>
 
 				<section>
-					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
-					<h2 style="margin-top:-25px;margin-bottom:0;">SI-IC Shaper Solution</h2>
-					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;font-size:1.5em">		
-						\begin{equation}
-						\begin{aligned}
-						
-						& \underset{t}{\text{minimize}}
-						& & t_n \\
-						& \fragment{1}{\text{subject to}}
-						& & \fragment{2}{PRV_{IC} \leq V_{tol}, \text{   } \forall \omega_1 \leq \omega \leq \omega_2}\\
-						&&& \fragment{3}{\left | A_i \right | \leq 1}\\
-						&&& \fragment{4}{\sum_{i=1}^{n} A_i = 1}\\
-						&&& \fragment{5}{\left |\sum_{i=1}^{k - 1} A_i \right | \leq 1, \text{  } \forall k \in n} \\ %\text{  } n,k=1,2,3...\\
-						\end{aligned}
-						\end{equation}
-					</div>
-				</div>
-				</section>
-
-				<section>
 					<h2 style="margin-top:-25px;margin-bottom:0;">Simulation Variables</h2>
 					<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
-					<table style="font-size:1.1em;margin-bottom:3px;">
-							<thead>
-								<tr>
-									<th>$\mbox{Variable}$</th>
-									<th>$\mbox{Value}$</th>
-								</tr>
-							</thead>
+					<div style="display:inline-block;position: absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);width:100%;font-size:1.0em">
+					<table style="font-size:1.5em;margin-bottom:3px;">
+						<thead>
+							<tr>
+								<th>$\mbox{Variable}$</th>
+								<th>$\mbox{Value}$</th>
+							</tr>
+						</thead>
 							<tbody>
 								<tr>
 									<td>$\omega_n$</td>
@@ -200,17 +248,8 @@
 									<td>$0.36\mbox{mm}$</td>
 								</tr>
 							</tbody>
-						</table>
-					</div>
-		
-				</section>
-
-				<section>
-					<h2 style="margin-top:-25px;margin-bottom:0;">SI-IC Response</h2>
-				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
-					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
-						<img class="plot" src="figures/SIIC_Response.svg" style="width:100%;">
-					</div>
+					</table>
+				</div>
 				</div>
 				</section>
 
@@ -218,7 +257,72 @@
 					<h2 style="margin-top:-25px;margin-bottom:0;">ZV-IC Response</h2>
 				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
 					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
-						<img class="plot" src="figures/ZVIC_Response.svg" style="width:100%;">
+						<img class="plot" src="figures/Simulations/ZVIC_Response.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">ZV-IC with Error</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Simulations/ZVIC_Response_Error.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+					<h2 style="margin-top:-25px;margin-bottom:0;">SI-IC Shaper Solution</h2>
+					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;font-size:1.5em">		
+						\begin{equation}
+						\begin{aligned}
+						
+						& \underset{t}{\text{minimize}}
+						& & t_n \\
+						& \fragment{1}{\text{subject to}}
+						& & \fragment{2}{PRV_{IC} \leq V_{tol}, \text{   } \forall \omega_1 \leq \omega \leq \omega_2}\\
+						&&& \fragment{3}{\left | A_i \right | \leq 1}\\
+						&&& \fragment{4}{\sum_{i=1}^{n} A_i = 1}\\
+						&&& \fragment{5}{\left |\sum_{i=1}^{k - 1} A_i \right | \leq 1, \text{  } \forall k \in n} \\ %\text{  } n,k=1,2,3...\\
+						\end{aligned}
+						\end{equation}
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">SI-IC Response</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Simulations/SIIC_Response.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">SI-IC with Error</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Simulations/SIIC_Response_Error.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">Error Response Comparison</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Simulations/Compare_Response_Error.svg" style="width:100%;">
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">Sensitivity Curves</h2>
+				<div style="display:table-cell;position:relative; width:1280px; height:960px; margin:0 auto;">
+					<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Simulations/Small_Range.svg" style="width:100%;">
 					</div>
 				</div>
 				</section>
@@ -231,6 +335,35 @@
 					</div>
 				</div>
 				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">Unshaped Response</h2>
+					<div style="display:table-cell;position:relative; width: 1280px; height: 960px; margin:0 auto;">
+						<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Experiment/Time-Response/Unshaped_Response.svg" style="width:100%;">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">ZV-IC Response</h2>
+					<div style="display:table-cell;position:relative; width: 1280px; height: 960px; margin:0 auto;">
+						<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Experiment/Time-Response/ZV-IC_Response.svg" style="width:100%;">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2 style="margin-top:-25px;margin-bottom:0;">SI-IC Response</h2>
+					<div style="display:table-cell;position:relative; width: 1280px; height: 960px; margin:0 auto;">
+						<div style="display:inline-block;width:100%;position:absolute;top: 45%; left: 50%;transform: translate(-50%,-50%);">
+						<img class="plot" src="figures/Experiment/Time-Response/SI-IC_Response.svg" style="width:100%;">
+						</div>
+					</div>
+				</section>
+
+
 
 				<section>
 					<h2 style="margin-top:-25px;margin-bottom:0;">SI-IC Sens Curve</h2>
@@ -255,17 +388,35 @@
 					<h2 style="margin-top:-25px;margin-bottom:0;">Conclusions</h2>
 					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);height:80%;width:100%;font-size: 1.0em">
 							<ul style="height:100%;justify-content: space-evenly;padding:0;margin:0;display: flex;flex-direction: column;">
-								<li class="fragment fade-up"><p>Input shaping constraints can be modified to elimniate nonzero inital conditions.</p></li>
+								<li class="fragment fade-up"><p>Input shaping constraints can be modified to eliminate nonzero inital conditions.</p></li>
 								<li class="fragment fade-up"><p>The non-robust, ZV-IC shaper can be solved in closed-form.</p></li>
-								<li class="fragment fade-up"><p>The Specified Insensitivity method</p></li>
+								<li class="fragment fade-up"><p>The Specified Insensitivity method can increase robustness to modeling errors.</p></li>
 							</ul>
 						</div>
 					</div>
 				</section>
 
-				<section data-state="centerText" data-markdown>
-					<h2 style="text-align: center;"> # Thank You.</h2>
+				<section>
+					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+					<div style="display:inline-block;position: absolute;top: 55%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+					<img style="width:25%" src="figures/acknowledgments/hibot.png">
+					<h2 style="text-align: center;">Acknowledgments</h2>
+					
+					<img/ style="width:25%" src="figures/acknowledgments/bor-logo.png"><img/ style="width:25%" src="figures/acknowledgments/nsf.png">
+					</div>
+					</div>
+
 				</section>
+
+				<section>
+					<div style="position:relative; width:1280px; height:960px; margin:0 auto;justify-content: center;">
+						<div style="display:inline-block;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);width:100%;">
+							<h2 style="text-align: center;">Thank You.</h2>
+
+						</div>
+					</div>
+				</section>
+
 			</div>
 		</div>
 
